@@ -1,0 +1,12 @@
+<nav>
+    <div>
+        <h2>Fonus</h2>
+    </div>
+    <div>
+        {% for category in categories %}
+        <a>
+            {{ category.name }}
+        </a>
+        {% endfor %}
+    </div>
+</nav>
