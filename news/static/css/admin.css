@@ -38,6 +38,15 @@
     align-items: center;
 }
 
+.admin-nav-right {
+    display: flex; 
+    gap: 0.5em;
+}
+
+.admin-nav-icon {
+    font-size: 32px;
+}
+
 .admin-nav-user {
     display: flex;
     flex-direction: column;
@@ -46,8 +55,8 @@
 }
 
 .admin-nav-photo {
-    width: 50px;
-    height: 50px;
+    width: 36px;
+    height: 36px;
     background-color: rgb(199, 199, 199);
     border-radius: 35px;
 }
@@ -64,18 +73,36 @@
 }
 
 .admin-nav-btn {
-    background-color: rgb(203, 131, 131);
-    width: 140px;
+    background-color: #DEDEDE;
+    width: 220px;
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 20px;
     text-decoration: none;
     color: black;
     font-weight: 550; 
     font-size: 1.1rem;
     border-radius: 5px;
-    border: 2px solid yellow;
+}
+
+.create-btn {
+    justify-content: center;
+    gap: .5em;
+    color: rgb(30, 16, 82);
+    background-color: yellowgreen;
+    font-weight: 600;
+}
+
+.plus-icon {
+    color: rgb(30, 16, 82);
+
+}
+
+.plus-icon-box {
+    width: 20px;
+    height: 20px;
 }
 
 .content {

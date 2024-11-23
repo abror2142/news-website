@@ -22,9 +22,20 @@
             {% block main %}
                 {% block menu %}
                     <div class="admin-menu-box">
-                        <a class="admin-nav-btn" href="{% url "writer_posts" %}">My Posts</a>
-                        <a class="admin-nav-btn" href="{% url "writer_waiting_list" %}">Post Waiting List</a>
-                        <a class="admin-nav-btn" href="{% url "writer_create_post" %}">Create New Post</a>
+                        <a class="admin-nav-btn" href="{% url "writer_posts" %}">
+                            <p>All Posts</p>
+                            <p>12</p>
+                        </a>
+                        <a class="admin-nav-btn" href="{% url "writer_waiting_list" %}">
+                            <p>Drafts</p>
+                            <p>1</p>
+                        </a>
+                        <a class="admin-nav-btn create-btn" href="{% url "writer_create_post" %}">
+                            <p>ADD POST</p>
+                            <p class="plus-icon-box"> 
+                                <i class="fa-solid fa-plus plus-icon"></i>
+                            </p>
+                        </a>
                     </div>
                 {% endblock menu %}
                 <div class="content">
@@ -38,7 +49,7 @@
                 {% include "./admin/footer.html" %}
             {% endblock footer %}
         </footer>
-        
+        <script src="https://kit.fontawesome.com/9f05e44f8a.js" crossorigin="anonymous"></script>
         <script src="" async defer></script>
     </body>
 </html>

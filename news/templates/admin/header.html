@@ -1,10 +1,26 @@
 <nav class="admin-nav">
     <div class="admin-nav-top">
         <h1>Admin Panel</h1>
-        <div class="admin-nav-user">
-            <div class="admin-nav-photo">
+        <div class="admin-nav-right">
+            <div class="admin-nav-user">
+                <div class="admin-nav-icon">
+                    <i class="fa-solid fa-bell admin-nav-icon"></i>
+                </div>
+                Messages
             </div>
-            {{ user.username }}
+
+            <div class="admin-nav-user">
+                <div class="admin-nav-icon">
+                    <i class="fa-solid fa-gear admin-nav-icon"></i>
+                </div>
+                Settings
+            </div>
+
+            <div class="admin-nav-user">
+                <div class="admin-nav-photo">
+                </div>
+                {{ user.username }}
+            </div>
         </div>
     </div>    
 </nav>
