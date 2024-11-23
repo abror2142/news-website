@@ -1,0 +1,11 @@
+{% extends 'admin_base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div>
+            <div>
+                {{ post.title }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}

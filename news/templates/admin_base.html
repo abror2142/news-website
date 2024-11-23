@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,19 +8,36 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+        {% block head %}{% endblock head %}
     </head>
-    <body>
-        {% block header %}
-            {% include "./admin/header.html" %}
-        {% endblock header %}
+    <body class="admin-site">
+        <header class="admin-header">
+            {% block header %}
+                {% include "./admin/header.html" %}
+            {% endblock header %}
+        </header>
 
-        {% block main %}
-        {% endblock main %}  
+        <main class="admin-main">
+            {% block main %}
+                {% block menu %}
+                    <div class="admin-menu-box">
+                        <a class="admin-nav-btn" href="{% url "writer_posts" %}">My Posts</a>
+                        <a class="admin-nav-btn" href="{% url "writer_waiting_list" %}">Post Waiting List</a>
+                        <a class="admin-nav-btn" href="{% url "writer_create_post" %}">Create New Post</a>
+                    </div>
+                {% endblock menu %}
+                <div class="content">
+                    {% block content %}{% endblock content %}
+                </div>
+            {% endblock main %}  
+        </main>
         
-        {% block footer %}
-            {% include "./admin/footer.html" %}
-        {% endblock footer %}
+        <footer class="admin-footer">
+            {% block footer %}
+                {% include "./admin/footer.html" %}
+            {% endblock footer %}
+        </footer>
         
         <script src="" async defer></script>
     </body>
